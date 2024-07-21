@@ -29,4 +29,17 @@ Zynq/FPGA实现CNN手写数字(0-9)识别
 
 ------
 
-注：本设计为SDK工程，需要通过SDK烧录
+注：
+
+①本设计为SDK工程，需要通过SDK烧录
+
+②本设计目前的PS侧CNN识别（卷积，池化，全连接），参考学习了bilibili UP主“开源骚客FPGA”的开源代码，在此表示感谢！！
+
+③本设计目前的PL侧的部分Verilog代码，参考学习了bilibili UP主“小梅哥爱漂流”及“正点原子官方”的开源代码，在此表示感谢！！
+
+④本设计目前的其他参考学习资料：（在此表示感谢！！）
+
+CSDN文章：[ZYNQ通过AXI DMA实现PL发送连续大量数据到PS DDR_zynq axidma-CSDN博客](https://blog.csdn.net/QDchenxr/article/details/134325391)
+
+
+
