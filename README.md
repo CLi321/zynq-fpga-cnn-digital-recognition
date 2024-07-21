@@ -3,7 +3,7 @@ Zynq/FPGA实现CNN手写数字(0-9)识别
 
 ------
 
-基于Verilog，使用的软件为vivado2018.3，开发板为小熊猫zynq7010。
+基于Verilog与C，开发软件为Vivado 2018.3及Xilinx SDK 2018.3，硬件平台为zynq7010。
 
 ------
 
