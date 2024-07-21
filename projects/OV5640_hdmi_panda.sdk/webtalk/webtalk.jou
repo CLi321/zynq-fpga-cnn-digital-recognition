@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Mon Jul 22 05:42:19 2024
+# Process ID: 4820
+# Current directory: C:/Users/51721/Desktop/git_CNN_OV5640_hdmi_panda_DMA/OV5640_hdmi_panda.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/51721/Desktop/git_CNN_OV5640_hdmi_panda_DMA/OV5640_hdmi_panda.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/51721/Desktop/git_CNN_OV5640_hdmi_panda_DMA/OV5640_hdmi_panda.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

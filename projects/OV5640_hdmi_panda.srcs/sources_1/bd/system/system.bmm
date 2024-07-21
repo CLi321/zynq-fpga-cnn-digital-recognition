@@ -1,0 +1,11 @@
+WORKFLOW_OPERATION simulation,dialog;
+
+DEFINE_MEMORY_TYPE blk_mem_gen_0_4K_4_MEM_DEVICE [0x00001000] 32;
+
+ADDRESS_MAP processing_system7_0 ARM 100 processing_system7_0
+   ADDRESS_SPACE blk_mem_gen_0_4K_4_ADDR_SPACE blk_mem_gen_0_4K_4_MEM_DEVICE  [0x40000000:0x40000FFF] axi_bram_ctrl_0
+     BUS_BLOCK
+      blk_mem_gen_0_4K_4_BUS_BLK [31:0] INPUT = "system_blk_mem_gen_0_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;

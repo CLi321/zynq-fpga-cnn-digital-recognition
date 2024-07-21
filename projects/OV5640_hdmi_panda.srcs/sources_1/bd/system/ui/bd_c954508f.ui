@@ -1,0 +1,50 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 430 -defaultsOSRD
+preplace port ps2pl_clk50m_0 -pg 1 -y 490 -defaultsOSRD
+preplace port pl2ps_axi_aclk_0 -pg 1 -y 390 -defaultsOSRD
+preplace port ps2pl_resetn_0 -pg 1 -y 510 -defaultsOSRD
+preplace port S_AXIS_0 -pg 1 -y 370 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 450 -defaultsOSRD
+preplace port pl2ps_axi_resetn_0 -pg 1 -y 460 -defaultsOSRD
+preplace port pl2ps_axi_0 -pg 1 -y 300 -defaultsOSRD
+preplace portBus BRAM_dout -pg 1 -y 260 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -y 400 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 2 -y 90 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -y 230 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 480 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 6 -y 180 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 4 -y 450 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -y 170 -defaultsOSRD
+preplace inst pl_bram_rd_0 -pg 1 -lvl 5 -y 250 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 2 -y 400 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -y 470 -defaultsOSRD
+preplace netloc smartconnect_0_M01_AXI 1 2 3 NJ 90 NJ 90 1400
+preplace netloc processing_system7_0_DDR 1 5 2 NJ 430 NJ
+preplace netloc smartconnect_0_M02_AXI 1 2 1 690
+preplace netloc slowest_sync_clk_0_1 1 0 5 20 380 360 170 710 500 1070 300 1400
+preplace netloc S00_AXI_0_1 1 0 4 NJ 300 NJ 300 NJ 300 1060J
+preplace netloc pl_bram_rd_0_the_rd_data 1 5 2 NJ 260 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 3 3 NJ 170 NJ 170 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 360 10 NJ 10 NJ 10 NJ 10 1860
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 5 2 NJ 510 NJ
+preplace netloc ext_reset_in_0_1 1 0 1 NJ
+preplace netloc smartconnect_0_M00_AXI 1 2 1 710
+preplace netloc axi_dma_0_s2mm_introut 1 3 1 1050J
+preplace netloc pl_bram_rd_0_BRAM_OUT 1 5 1 1870
+preplace netloc S_AXIS_0_1 1 0 2 NJ 370 NJ
+preplace netloc xlconcat_0_dout 1 4 1 1380
+preplace netloc processing_system7_0_FIXED_IO 1 5 2 NJ 450 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 4 1 N
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 N
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 4 370 190 700 250 1080 160 1390
+preplace netloc axis_data_fifo_0_M_AXIS 1 2 1 N
+preplace netloc processing_system7_0_FCLK_CLK0 1 5 2 NJ 490 NJ
+levelinfo -pg 1 0 190 530 880 1230 1630 1970 2090 -top 0 -bot 600
+"
+}
+{
+   "da_clkrst_cnt":"2"
+}
