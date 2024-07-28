@@ -62,7 +62,7 @@
 #define  BRAM_DATA_BYTE      	 	4  //BRAM数据字节个数
 
 #define	 DMA_DATA_BYTE				4  //32位的数据,4个字节
-#define	 DMA_BUF_SIZE				(1024 + 5)
+#define	 DMA_BUF_SIZE				2048
 
 
 XAxiDma  axi_dma_0_inst;
