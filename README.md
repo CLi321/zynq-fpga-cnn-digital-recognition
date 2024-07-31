@@ -3,9 +3,17 @@ Zynq/FPGA实现CNN手写数字(0-9)识别
 
 ------
 
+main分支，降采样（112×112图像降采样到28×28图像）在PL侧进行；
+
+main_ps分支，降采样（112×112图像降采样到28×28图像）在PS侧进行；
+
+------
+
 基于Verilog与C，开发软件为Vivado 2018.3及Xilinx SDK 2018.3，硬件平台为zynq7010。
 
 效果演示视频：[Zynq/FPGA实现CNN手写数字识别_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1oK88eLEMy/)
+
+（注：视频为main_ps分支代码的演示）
 
 ——————
 
