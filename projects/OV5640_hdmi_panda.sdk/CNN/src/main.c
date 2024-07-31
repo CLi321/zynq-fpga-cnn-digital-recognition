@@ -118,6 +118,7 @@ int main()
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
+/*
     DMA_RxBufferPtr = (uint32_t *)DMA_RX_BUFFER_BASE;
 
     int DMA_receive_index;
@@ -126,10 +127,46 @@ int main()
 
 	interrupt_init();
 	axi_dma_init();
+*/
+
+	uint16_t *cmos_data = (uint16_t *)DDR_BASEARDDR;
+    int temp_index;
+	int index;
+    uint16_t temp_img_data[12544];
+    uint8_t  img_data[784];
 
     while(1)
     {
 
+        // 获取摄像头（转灰度之后）的112*112图像
+    	temp_index = 0;
+        for(int h_cnt=0; h_cnt<IMAGE_HEIGHT; h_cnt++)
+        {
+            for(int w_cnt=0; w_cnt<IMAGE_WIDTH; w_cnt++)
+            {
+                if(( w_cnt>=IMAGE_WIDTH/2 && w_cnt<IMAGE_WIDTH/2+112) && (h_cnt>=IMAGE_HEIGHT/2 && h_cnt<IMAGE_HEIGHT/2+112))
+                {
+                	temp_img_data[temp_index]   = cmos_data[h_cnt*IMAGE_WIDTH + w_cnt];
+                	temp_index = temp_index + 1;
+                }
+            }
+        }
+
+        // 获取灰度的28*28图像
+    	index = 0;
+        for(int h_cnt=0; h_cnt<112; h_cnt++)
+        {
+            for(int w_cnt=0; w_cnt<112; w_cnt++)
+            {
+				if(w_cnt%4 == 0 && h_cnt%4 == 0)
+				{
+					img_data[index] = temp_img_data[h_cnt*112+w_cnt];
+					index++;
+				}
+            }
+        }
+		
+/*
     	XAxiDma_SimpleTransfer(&axi_dma_0_inst, (UINTPTR)DMA_RxBufferPtr, DMA_BUF_SIZE*DMA_DATA_BYTE, XAXIDMA_DEVICE_TO_DMA);
     	Xil_DCacheFlushRange((UINTPTR)DMA_RxBufferPtr, DMA_BUF_SIZE*DMA_DATA_BYTE); //刷新Data Cache
     	while(!dma_rx_done);
@@ -144,7 +181,7 @@ int main()
             	DMA_receive_index++;
             }
         }
-
+*/
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -163,7 +200,7 @@ int main()
 					{
 						for(int y=0; y<5; y++)
 						{
-							conv_temp += DMA_receive_data[row*28+col+x*28+y] * cnn_param_w[x*5+y+n*25];
+							conv_temp += img_data[row*28+col+x*28+y] * cnn_param_w[x*5+y+n*25];
 						}
 					}
 					conv_temp += cnn_param_b[n];
